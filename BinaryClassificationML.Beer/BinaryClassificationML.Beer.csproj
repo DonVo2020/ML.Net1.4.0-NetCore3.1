@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.4.0" />
+    <None Update="../BinaryClassificationML.Beer\datasets\problem1_train.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="../BinaryClassificationML.Beer\datasets\problem1_validate.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="../BinaryClassificationML.Beer\datasets\problem1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>   
+  </ItemGroup>
+
+</Project>

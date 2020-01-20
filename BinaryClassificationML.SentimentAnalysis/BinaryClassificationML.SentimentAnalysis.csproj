@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.AutoML" Version="0.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="datasets\wikipedia-detox-250-line-data.tsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="datasets\wikipedia-detox-250-line-test.tsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\DEVELOPMENT\Machine Learning Projects\DonVo.ML100\datasets\wikipedia-detox-250-line-data.tsv" Link="datasets\wikipedia-detox-250-line-data.tsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="C:\DEVELOPMENT\Machine Learning Projects\DonVo.ML100\datasets\wikipedia-detox-250-line-test.tsv" Link="datasets\wikipedia-detox-250-line-test.tsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DonVo.ML110.Commons\DonVo.ML110.Commons.csproj" />
+  </ItemGroup>
+
+</Project>

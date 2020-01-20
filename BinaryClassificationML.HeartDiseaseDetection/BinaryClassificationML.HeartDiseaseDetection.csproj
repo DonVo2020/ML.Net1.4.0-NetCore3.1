@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MLModels\**" />
+    <EmbeddedResource Remove="MLModels\**" />
+    <None Remove="MLModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="MLModels\**" />
+    <EmbeddedResource Remove="MLModels\**" />
+    <None Remove="MLModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="datasets\HeartTest.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="datasets\HeartTraining.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="C:\DEVELOPMENT\Machine Learning Projects\DonVo.ML100\datasets\HeartTest.csv" Link="datasets\HeartTest.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="C:\DEVELOPMENT\Machine Learning Projects\DonVo.ML100\datasets\HeartTraining.csv" Link="datasets\HeartTraining.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.4.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.4.0" />
+  </ItemGroup>
+
+</Project>
